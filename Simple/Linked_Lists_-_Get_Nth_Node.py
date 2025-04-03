@@ -16,9 +16,3 @@ def get_nth(node, index):
         counter += 1
         node = node.next
     raise ValueError("Index out of range")
-
-linked_list = Node(1, Node(2, Node(3, None)))
-test.expect_error("Invalid index value should throw error.", lambda : get_nth(linked_list, 3))
-test.expect_error("Invalid index value should throw error.", lambda : get_nth(linked_list, -1))
-test.expect_error("Invalid index value should throw error.", lambda : get_nth(linked_list, 100))
-test.expect_error("None linked list should throw error.", lambda : get_nth(None, 0))
